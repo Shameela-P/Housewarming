@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Housewarming Invitation | Thara Family</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="customCursor" class="custom-cursor"></div>
+  <div id="cursorTrail" class="cursor-trail"></div>
+
+  <!-- Golden Dust Particles Container -->
+  <div id="particles-container"></div>
+
+  <!-- ENVELOPE SCENE -->
+  <section id="envelopeScene" class="envelope-scene">
+    <div class="ambient-glow"></div>
+    
+    <div class="envelope-wrapper" id="envelopeWrapper">
+      <!-- The back flap of the envelope -->
+      <div class="envelope-back"></div>
+      
+      <!-- The invitation card inside -->
+      <div class="invitation-card-inside" id="invitationCardInside">
+        <h2 class="card-title">Housewarming</h2>
+        <p class="card-subtitle">Thara Family</p>
+      </div>
+      
+      <!-- The front of the envelope -->
+      <div class="envelope-front">
+        <div class="envelope-text">
+          <p class="envelope-invite-text">You're Invited</p>
+          <p class="envelope-sub-text">A New Beginning Awaits...</p>
+        </div>
+      </div>
+      
+      <!-- The top flap (opens) -->
+      <div class="envelope-flap" id="envelopeFlap"></div>
+      
+      <!-- Wax seal -->
+      <div class="wax-seal" id="waxSeal">
+        <span class="seal-logo">T</span>
+      </div>
+    </div>
+    
+    <button class="open-invitation-btn" id="btnOpenEnvelope">Open Invitation</button>
+  </section>
+
+  <!-- MAIN INVITATION CONTENT (Starts hidden) -->
+  <main id="mainInvitation" class="hidden">
+    
+    <!-- Cinematic Reveal Scene -->
+    <section class="scene hero-scene" id="scene1">
+      <div class="text-sequence">
+        <p class="seq-text fade-in-up" style="transition-delay: 1s;">With the blessings of the Almighty</p>
+        <h1 class="seq-title blur-to-clear" style="transition-delay: 2.5s;">We Are Moving Into Our New Home</h1>
+        <h2 class="seq-event letter-spacing-anim" style="transition-delay: 4s;">HOUSEWARMING CEREMONY</h2>
+        <h3 class="seq-sub fade-in-up" style="transition-delay: 5s;">Griha Pravesh</h3>
+      </div>
+    </section>
+
+    <!-- Event Info Scene -->
+    <section class="scene info-scene reveal">
+      <div class="date-time-container">
+        <div class="animated-line"></div>
+        <div class="date-block slide-in-right">
+          <span class="day">Sunday</span>
+          <span class="date">23 August 2026</span>
+        </div>
+        <div class="time-block slide-in-left">
+          <span class="time-icon">⏰</span>
+          <span class="time">10:00 AM – 1:00 PM</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cinematic Home Animation Scene -->
+    <section class="scene home-anim-scene">
+      <div class="story-transition reveal">
+        <p class="story-text">A dream...</p>
+      </div>
+      
+      <div class="house-drawing-container reveal">
+        <div class="house-illustration" id="houseIllustration">
+          <img src="images/house_entrance.png" class="full-house fade-in-slow" alt="Home" />
+          <div class="diya diya-left glow-anim"></div>
+          <div class="diya diya-right glow-anim"></div>
+        </div>
+        <h2 class="home-title blur-to-clear mt-4">A place we will call HOME ❤️</h2>
+      </div>
+    </section>
+
+    <!-- Message & Family Scene -->
+    <section class="scene message-scene container reveal">
+      <div class="elegant-card">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+        
+        <p class="story-text">"A new beginning, a new chapter, and a home filled with love."</p>
+        
+        <p class="body-text mt-4">
+          With the blessings of our family and loved ones, we are delighted to invite you and your family to celebrate the housewarming ceremony of our new home.
+        </p>
+
+        <div class="signature-block mt-4">
+          <p class="with-love">With Love</p>
+          <h3 class="family-name" id="displayFamilyName">Thara Family</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Venue Scene -->
+    <section class="scene venue-scene container reveal">
+      <h2 class="scene-title">Our New Home</h2>
+      
+      <div class="address-card slide-up">
+        <p id="venueAddressText" class="address-text"></p>
+      </div>
+
+      <div class="map-card slide-up" style="transition-delay: 0.3s;">
+        <iframe id="mapIframe" class="map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <a id="getDirectionsBtn" href="#" target="_blank" rel="noopener noreferrer" class="get-directions-btn">
+          <span class="btn-icon">📍</span> Get Directions
+        </a>
+      </div>
+    </section>
+
+    <!-- Countdown Scene -->
+    <section class="scene countdown-scene container reveal">
+      <h2 class="scene-title">Counting down to our special day...</h2>
+      <div class="countdown-wrapper" id="countdownActive">
+        <div class="cd-box"><span id="cd-days" class="cd-num">00</span><span class="cd-label">Days</span></div>
+        <div class="cd-box"><span id="cd-hours" class="cd-num">00</span><span class="cd-label">Hours</span></div>
+        <div class="cd-box"><span id="cd-minutes" class="cd-num">00</span><span class="cd-label">Minutes</span></div>
+        <div class="cd-box"><span id="cd-seconds" class="cd-num">00</span><span class="cd-label">Seconds</span></div>
+      </div>
+      <h2 class="scene-title hidden" id="countdownFinished">The celebration has begun! ❤️</h2>
+    </section>
+
+    <!-- RSVP Scene -->
+    <section class="scene rsvp-scene container reveal">
+      <div class="rsvp-card">
+        <p class="story-text">Your presence will make our celebration even more special.</p>
+        <h3 class="rsvp-question">Will you join us?</h3>
+        
+        <div class="rsvp-buttons">
+          <a id="btnRsvpYes" href="#" target="_blank" class="rsvp-btn yes">Yes, I'll Be There ❤️</a>
+          <a id="btnRsvpMaybe" href="#" target="_blank" class="rsvp-btn maybe">Maybe</a>
+          <a id="btnRsvpNo" href="#" target="_blank" class="rsvp-btn no">Sorry, Can't Make It</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Scene -->
+    <section class="scene final-scene container reveal">
+      <div class="ambient-glow final-glow"></div>
+      <h2 class="scene-title">We can't wait to celebrate this beautiful beginning with you!</h2>
+      <p class="final-date">See you on 23 August 2026 ❤️</p>
+      <div class="signature-block mt-4">
+        <p class="with-love">With Love</p>
+        <h3 class="family-name">Thara Family</h3>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
