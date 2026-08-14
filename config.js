@@ -1,6 +1,6 @@
 const config = {
-  familyName: "Vennila, Kannan & Tharasree",
-  hostNames: "Vennila, Kannan & Tharasree",
+  familyName: "Kannan, Vennila & Tharasree",
+  hostNames: "Kannan, Vennila & Tharasree",
   homeName: "MAGIZHAGAM",
   eventDateString: "Sunday, 23 August 2026",
   eventTime: "10:00 AM onwards",

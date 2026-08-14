@@ -161,7 +161,7 @@ a, button { cursor: none; }
 .envelope-front {
   position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;
   background: linear-gradient(to top, rgba(253, 251, 247, 1) 0%, rgba(240, 235, 216, 1) 100%);
-  clip-path: polygon(0% 100%, 100% 100%, 100% 40%, 50% 70%, 0% 40%);
+  clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 50% 65%, 0% 0%);
   z-index: 2; border-radius: 0 0 5px 5px;
   filter: drop-shadow(0 -5px 10px rgba(0,0,0,0.15));
 }
